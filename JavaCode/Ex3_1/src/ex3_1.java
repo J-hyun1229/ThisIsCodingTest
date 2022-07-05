@@ -17,6 +17,7 @@ public class ex3_1 {
             money %= coin;
         }
 
+
         System.out.println(res);
 
     }
