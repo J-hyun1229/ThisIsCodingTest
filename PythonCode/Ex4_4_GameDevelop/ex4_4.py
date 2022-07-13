@@ -21,7 +21,7 @@ moved = False
 
 i = 0
 
-# num = 0
+num = 0
 
 arr[a][b] = 2
 
@@ -44,7 +44,7 @@ while True:
             a = atmp
             b = btmp
             moved = True
-            i = 0
+            i = 0 # 방향 전환 횟수
             res += 1
             arr[atmp][btmp] = '2'
     else:
@@ -70,8 +70,8 @@ while True:
         else:
             i += 1
 
-    """
-    <test Code>
+
+
     num += 1
     print("차시:",num,"방향:",d,"moved:",moved)
     print("현재 위치: (%d, %d)" % (a, b))
@@ -80,7 +80,7 @@ while True:
             print(e, end=' ')
         print()
     print(res)
-    """
+
 
 
 print(res)
