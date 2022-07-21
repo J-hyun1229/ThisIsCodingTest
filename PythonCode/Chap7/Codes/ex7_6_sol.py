@@ -9,7 +9,7 @@ end = max(arr)
 res = 0
 
 while start <= end:
-    length = 0
+    length = 0  # 손님이 가져갈 수 있는 떡의 길이
     mid = (start + end) // 2
     for i in arr:
         if i > mid:
