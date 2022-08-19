@@ -16,11 +16,11 @@ for i in range(1, n+1):  # i: 강의 번호.
         if j == -1:
             break
         curr[j].append(i)  # i의 선수강의가 j (j->i). data[j]는 i의 선수강의들.
-        pre_lec[i] += 1
+        pre_lec[i] += 1  # 진입차수
 
 
 def topology_sort():
-    sort_res = []
+    # sort_res = []
     q = deque()
 
     # 처음 실행 시 진입 차수가 0인 노드들을 큐에 삽입.
@@ -30,7 +30,7 @@ def topology_sort():
 
     while q:
         now = q.popleft()  # 진입차수가 0인 노드를 꺼낸다.
-        sort_res.append(now)
+        # sort_res.append(now)
         for i in curr[now]:  # curr[now]에는 now와 연결된 노드들이 들어있음.
             pre_lec[i] -= 1  # 간선 제거 (진입차수 -1)
 

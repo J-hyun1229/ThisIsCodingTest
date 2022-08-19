@@ -18,6 +18,8 @@ for i in sArr[1:]:
     # 0은 곱하지 않고 더한다.
     if i == 0:
         continue
+    if i == 1:
+        res += 1
     res *= i
 
 print(res)
