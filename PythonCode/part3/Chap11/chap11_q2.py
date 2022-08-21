@@ -9,18 +9,13 @@ for ch in s:
     sArr.append(int(ch))
 
 # print(sArr) # test code
-
-sArr.sort(reverse=True)
-
 res = sArr[0]
 
 for i in sArr[1:]:
-    # 0은 곱하지 않고 더한다.
-    if i == 0:
-        continue
-    if i == 1:
-        res += 1
-    res *= i
+    if (res == 0) or (i<2):
+        res += i
+    else:
+        res *= i
 
 print(res)
 end = time.perf_counter()
